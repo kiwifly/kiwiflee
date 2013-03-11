@@ -1,12 +1,179 @@
----
-layout: default
-title: kiwi's blog
----
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>index</title>
+		<style type="text/css">
+			body {
+				background: url('./images/body_bg.png');
+				font-family: Tahoma,Geneva,Verdana,sans-serif;
+				color: #333;
+				margin: 0;
+				padding: 0;
+			}
+			.intro {
+				background: url('./images/intro_bg.jpg') no-repeat center center;
+				width: 100%;
+				height: 750px;
+			}
+			.section {
+				height: 650px;
+				padding-top: 100px;
+				width: 980px;
+				margin: 0 auto;
+			}
+			h1 {
+				color: #f2b220;
+				font-size: 30px;
+				letter-spacing: 0.075em;
+				text-shadow: 3px 3px 7px #333;
+				text-align: center;
+				margin-bottom: 65px;
+			}
+			.headline {
+				margin-bottom: 65px;
+			}
+			.quotes {
+				width: 384px;
+				height: 103px;
+				float: left;
+				margin: 0 50px 0 100px;
+				padding: 0;
+			}
+			.quotes p {
+				text-shadow: 2px 2px 5px #000000;
+				font-size: 18px;
+				font-style: italic;
+				text-align: center;
+				color: #fff;
+			}
+			.yellow232 {
+				width: 232px;
+				background: url('./images/button-232px-yellow.png');
+			}
+			.yellow232:hover {
+				background: url('./images/button-232px-yellow.png') no-repeat 0 -60px;
+			}
 
-#{{ page.title }}#
-
-最新文章
-
-{% for post in site.posts %}
-	+{{ post.date | date_to_string }} [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
-{% endfor %}
+			.button {
+				height: 61px;
+				color: #fff;
+				text-align: center;
+				font-weight: 900;
+				text-shadow: 1px 1px 2px #333;
+				text-decoration: none;
+				font-size: 17px;
+				line-height: 57px;
+				display: block;
+			}
+			#start {
+				float: left;
+			}
+			.white_area {
+				height: 188px;
+				padding: 25px;
+				background: url('./images/nl_home_bg.png');
+				width: 714px;
+				margin: 30px auto;
+			}
+			.clear {
+				clear: both;
+			}
+			.book {
+				background: url('./images/dotted_vert.png') right 8px repeat-y;
+				width: 200px;
+				height: 188px;
+				padding-right: 20px;
+				float: left;
+			}
+			.book img {
+				margin-top: 30px;
+			}
+			.signup {
+				width: 430px;
+				height: 204px;
+				padding: 10px 20px 0 0;
+				float: right;
+			}
+			.signup h2 {
+				font-size: 18px;
+				text-transform: uppercase;
+				color: #70893f;
+				margin-bottom: 10px;
+			}
+			.signup p {
+				margin-bottom: 10px;
+				font-size: 17px;
+			}
+			.email {
+				padding-top: 20px;
+			}
+			.email label {
+				float: left;
+				font-size: 14px;
+				height: 40px;
+				line-height: 40px;
+				padding-right: 10px;
+			}
+			.email input {
+				float: left;
+				padding-left: 10px;
+			}
+			.email .text {
+				height: 30px;
+				width: 200px;
+			}
+			#jump {
+				display: none;
+				position: absolute;
+				right: 300px;
+				top: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="intro">
+			<div class="section">
+				<h1>THE MOVEMENT THAT IS TRANSFORMING HOW<br/>NEW PRODUCTS ARE BUILT AND LAUNCHED</h1>
+				<div class="headline">
+					<div class="quotes">
+						<p> “Many CEOs have fully embraced and continue to internalize the lean startup principles” </p>
+					</div>
+					<a id="start" class="button yellow232" href="javascript:">
+						Learn More »
+					</a>
+					<div id="jump">
+						<a class="button yellow232" href="./page1.html">button1</a>
+						<a class="button yellow232" href="./page2.html">button2</a>
+						<a class="button yellow232" href="#">button3</a>
+						<a class="button yellow232" href="#">button4</a>
+						<a class="button yellow232" href="#">button5</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="white_area">
+					<div class="book"><img src="./images/buy_book_bg.jpg"></div>
+					<div class="signup">
+						<h2>Sign up for the Lean Startup Newsletter</h2>
+						<p>Get updates and exclusive content direct from Eric Ries</p>
+						<div class="email">
+							<label>My Email</label>
+							<input type="text" value="you@domain" class="text">
+							<input type="image" src="http://theleanstartup.com/images/btn_send_i.png" value="Send">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var s = document.getElementById('start');
+			var jump = document.getElementById('jump');
+			s.onclick = function(){
+				s.style.display = 'none';
+				jump.style.display = 'block';
+			}
+		}
+	</script>
+</html>

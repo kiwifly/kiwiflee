@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>page1</title>
+		<style type="text/css">
+			body {
+				font-size: 16px;
+			}
+			.auto { width: 720px; margin-left: auto; margin-right: auto;}
+			table, table td {
+				border: 1px solid #CCC;
+				border-collapse: collapse;
+			}
+			tr { height: 30px; }
+			.td_s { display: inline-block; }
+			.td_l {
+				background: #E0F8F3;
+			}
+			a { float: right; text-decoration: none; color:blue;}
+			.notice, .title { color: #24769E; font-size: 24px;}
+			.c { text-align: center; }
+			.mt10 { margin-top: 10px; }
+			.w400 { width: 400px; }
+			.w500 { width: 500px; }
+			.w100 { width: 100px; }
+			span { color: red; }
+			textarea { width: 350px; height: 60px; overflow-y:scroll; }
+		</style>
+	</head>
+	<body>
+		<div class="title auto c mt10"><a href="./index.html">返回</a>差别化管理项目备案登记表</div>
+		<table class="auto mt10">
+			<tr><td colspan="4"><a href="#">《部分环境影响轻微建设项目差别化管理名录（试行）》下载</a></td></tr>
+			<tr>
+				<td class="td_l">项目名称：</td>
+				<td colspan="3"><input type="text" class="w400"><span>*</span></td>
+			</tr>
+			<tr>
+				<td class="td_l">项目别名：</td>
+				<td colspan="3">
+					<input type="text" class="w400">
+					<input type="radio" name="nickname" checked>是
+					<input type="radio" name="nickname">否
+				</td>
+			</tr>
+			<tr>
+				<td class="td_l">行业：</td>
+				<td>
+					<select><option>- 选择 -</option></select>
+					<span>*</span>
+				</td>
+				<td class="td_l">项目类别：</td>
+				<td>
+					<select name="" id="">
+						<option>- 选择 -</option>
+					</select>
+					<span>*</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="td_l">备注：</td>
+				<td colspan="3"><textarea></textarea></td>
+			</tr>
+			<tr>
+				<td class="td_l">项目地点：</td>
+				<td colspan="3"><input type="text" class="w500"><span>*</span></td>
+			</tr>
+			<tr>
+				<td class="td_l">项目概况：</td>
+				<td colspan="3"><textarea name="" id="" cols="30" rows="10">经营性企业，请填写经营内容</textarea></td>
+			</tr>
+			<tr>
+				<td class="td_l">负责人：</td>
+				<td><input type="text" class="w100"><span>*</span></td>
+				<td class="td_l">身份证号码：</td>
+				<td><input type="text" class="w100"><span>*</span></td>
+			</tr>
+			<tr>
+				<td class="td_l">手机：</td>
+				<td><input type="text" class="w100"><span>*</span></td>
+				<td class="td_l">电子邮件：</td>
+				<td><input type="text" class="w100"><span>*</span></td>
+			</tr>
+			<tr><td colspan="4" class="notice">通知方式</td></tr>
+			<tr>
+				<td class="td_l">短信：</td>
+				<td><input type="text" class="w100"></td>
+				<td class="td_l">电子邮件：</td>
+				<td><input type="text" class="w100"><span>*</span></td>
+			</tr>
+		</table>
+		<div class="auto c mt10">
+			<input type="button" value="上一步">
+			<input type="button" value="暂存">
+			<input type="button" value="提交">
+		</div>
+	</body>
+</html>

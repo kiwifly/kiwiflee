@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>page2</title>
+		<style type="text/css">
+			a.return {
+				font-size: 24px;
+				text-decoration: none;
+				color: blue;
+				font-weight: bold;
+				display: block;
+				margin-left: 800px;
+			}
+			ul, li { list-style: none; padding: 0; margin: 0; }
+			.auto { margin-left: auto; margin-right: auto; }
+			.wrapper { font-size:14px; width: 960px; margin-left: auto; margin-right: auto; }
+			.filter { width: 100%; margin-bottom: 25px; }
+			.f_header { 
+				height: 28px; 
+				line-height: 28px; 
+				border: 1px solid #CCC; 
+				background: url('./images/filter-selector-icons.gif') repeat-x left bottom;
+				padding: 5px 30px;
+			}
+			.selector {
+				border-bottom: 1px solid #DDD;
+				padding: 0 30px;
+				position: relative;
+			}
+			.selector li {
+				border-bottom: 1px dashed #e5e5e5;
+				height: 32px;
+				line-height: 32px;
+				overflow: hidden;
+				margin-right: 55px;
+			}
+			.clearfix { *zoom:1; }
+			.clearfix:after{clear:both;content:".";display:block;visibility:hidden;height:0;}
+			.label {
+				width: 165px;
+				float: left;
+				text-align: right;
+				font-weight: bold;
+			}
+			.items a {
+				padding: 0 10px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-decoration: none;
+			}
+			.button {
+				position: absolute;
+				top: 4px;
+				right: 0;
+				width: 50px;
+				text-align: center;
+				height: 22px;
+				line-height: 22px;
+				color: #666;
+				cursor: pointer;
+				box-shadow: 0 1px 2px #FEFEFE;
+				background: #F5F5F5;
+				border: 1px solid #CCC;
+			}
+			.content {
+				border: 1px solid #dedede;
+				position: relative;
+				width: 928px;
+				padding: 5px 0;
+			}
+			.order {
+				border-top: none;
+				background: url('./images/filter-selector-icons.gif') repeat-x left bottom;;
+			}
+			.blue_line {
+				width: 930px;
+				border-top: 2px solid #4D7DDD;
+				height: 0;
+				overflow: hidden;
+			}
+			.ord {
+				height: 25px;
+				line-height: 25px;
+				padding: 5px;
+			}
+			.ord span {
+				width: 70px;
+				border: 1px solid #CCC;
+				display: inline-block;
+				text-align: center;
+				cursor: pointer;
+			}
+			.def {
+				color: #FFF;
+				background: #b1b7c2;
+				font-weight: bold;
+			}
+			.l_line {
+				padding: 5px 10px 5px 10px;
+				float: left;
+				border-right: 1px solid #dedede;
+			}
+			label {
+				cursor: pointer;
+				padding: 0 1px;
+				margin-right: 5px;
+			}
+			label.sec {
+				background: #5385E0;
+				color: #FFF; 
+			}
+			.l_line {
+				font-size: 12px;
+			}
+			.l_line span { font-weight: bold; }
+			table, table td { border-collapse: collapse; }
+			table {
+				width: 930px;
+				margin-top: 14px;
+				text-align: center;
+			}
+			table td {
+				width: 16%;
+				height: 40px;
+				border-bottom: 1px dashed #f2f2f2;
+			}
+			tr.head {
+				border: 1px solid #dedede;
+				background: #F9F9F9;
+				height: 32px;
+			}
+			table a {
+				color: #FFF;
+				background: #0092ff;
+				border: 1px solid #CCC;
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				display: inline-block;
+				font-size: 20px;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<a href="./index.html" class="return">返回首页</a>
+			<div class="filter">
+				<p class="f_header">找到 8 款产品，请根据您的条件做筛选</p>
+				<ul class="selector">
+					<li class="clearfix">
+						<div class="label">您的职业身份：</div>
+						<div class="items">
+							<a href="#">企业主</a>
+							<a href="#">个体户</a>
+							<a href="#">公务员/事业单位员工</a>
+							<a href="#">大型垄断国企员工</a>
+							<a href="#">世界500强企业员工</a>
+							<a href="#">上市企业员工</a>
+						</div>
+						<div class="button">更多&#x25BC;</div>
+					</li>
+					<li class="clearfix">
+						<div class="label">每月打入银行卡的工资：</div>
+						<div class="items">
+							<a href="#">只有现金收入</a>
+							<a href="#">2000以下</a>
+							<a href="#">2000元</a>
+							<a href="#">2500元</a>
+							<a href="#">3000元</a>
+							<a href="#">3500元</a>
+						</div>
+						<div class="button">更多&#x25BC;</div>
+					</li>
+					<li class="clearfix">
+						<div class="label">是否有信用记录：</div>
+						<div class="items">
+							<a href="#">无信用记录</a>
+							<a href="#">有信用记录（信用卡，贷款等）</a>
+						</div>
+					</li>
+					<li class="clearfix">
+						<div class="label">是否有本地商品房：</div>
+						<div class="items">
+							<a href="#">无本地商品房</a>
+							<a href="#">本人名下有（有房产证）</a>
+							<a href="#">父母、配偶名下有（有房产证）</a>
+						</div>
+					</li>
+					<li class="clearfix" style="border-bottom:0;">
+						<div class="label">抵押物类型：</div>
+						<div class="items">
+							<a href="#">无抵押物</a>
+							<a href="#">住宅</a>
+							<a href="#">商铺</a>
+							<a href="#">办公楼</a>
+							<a href="#">厂房</a>
+							<a href="#">车辆</a>
+							<a href="#">其他抵押物</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="content order auto">
+				<div class="blue_line"></div>
+				<div class="ord">
+					<span class="def">默认排序</span>
+					<span>月供&#x25B2; </span>
+					<span>总利息&#x25B2; </span>
+				</div>
+			</div>
+			<div class="content auto clearfix" style="background:#F9F9F9;">
+				<div class="l_line">
+					<span>机构类型：</span>
+					<label for="" class="sec">不限</label>
+					<label for="">银行</label>
+					<label for="">小贷公司</label>
+					<label for="">典当行</label>
+					<label for="">其他</label>
+				</div>
+				<div class="l_line">
+					<span>担保方式：</span>
+					<label for="" class="sec">不限</label>
+					<label for="">抵押贷</label>
+					<label for="">纯信用贷</label>
+					<label for="">担保贷</label>
+				</div>
+				<div class="l_line" style="border-right:none;">
+					<span>还款方式：</span>
+					<label for="" class="sec">不限</label>
+					<label for="">分期还款</label>
+					<label for="">到期还款</label>
+					<label for="">随借随还</label>
+				</div>
+			</div>
+			<table class="auto">
+				<tr class="head">
+					<td>银行/项目</td>
+					<td>总利息</td>
+					<td>月供</td>
+					<td>担保方式</td>
+					<td>产品特点</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>平安金融/信...</td>
+					<td>0.77万/3万</td>
+					<td>3140元/月</td>
+					<td>纯信用</td>
+					<td>2天放款</td>
+					<td><a href="#">查看</a></td>
+				</tr>
+				<tr>
+					<td>平安金融/信...</td>
+					<td>0.77万/3万</td>
+					<td>3140元/月</td>
+					<td>纯信用</td>
+					<td>2天放款</td>
+					<td><a href="#">查看</a></td>
+				</tr>
+				<tr>
+					<td>平安金融/信...</td>
+					<td>0.77万/3万</td>
+					<td>3140元/月</td>
+					<td>纯信用</td>
+					<td>2天放款</td>
+					<td><a href="#">查看</a></td>
+				</tr>
+
+			</table>
+		</div>
+	</body>
+</html>

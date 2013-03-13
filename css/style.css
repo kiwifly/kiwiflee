@@ -73,21 +73,12 @@ h1 {
 .clear {
 	clear: both;
 }
-.book {
-	background: url('../images/dotted_vert.png') right 8px repeat-y;
-	width: 200px;
-	height: 188px
-	padding-right: 20px;
-	float: left;
-}
-.book img {
-	margin-top: 30px;
-}
 .signup {
 	width: 430px;
 	height: 204px;
 	padding: 10px 20px 0 0;
-	float: right;
+	margin-left: auto;
+	margin-right: auto;
 }
 .signup h2 {
 	font-size: 18px;

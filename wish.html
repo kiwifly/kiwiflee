@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="./lib/tagcanvas.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery.js"></script>
+  	<link rel="stylesheet" type="text/css" href="./css/wish.css">
+	<title>心愿清单</title>
+  </head>
+  <!--
+  <body style="background: -webkit-gradient(linear, 0 0, 0 100%, from(#1e3432), to(#1e3432));font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu;"> 
+  -->
+  <body>
+    <a id="drawLuckly" href="#"><img src="./images/redbutton.png" width="180" height="180"></a>
+	<ul id="tags" class="weighted">
+	</ul>
+	<canvas height="860" width="1080" id="tagcanvas"></canvas>
+	<div id="goldegg"><img width="80" height="70" src="./images/gold_egg.png"></div>
+	<div id="chuizi"><img src="./images/chuizi.png"></div>
+	<div id="winner"></div>
+  </body>
+	<script type="text/javascript">
+		var fontSize = ["2.83","3.61","9.64","4.47","3.46","12.32","3.74","3.16","8.36","4.36","3.32","10.68","4.69","4.8","5.47","2.65","8.77","5.92","13.23","4.58","13","12.44"];
+//		var fontColor = ['#d43c82', '#E9B464', '#DD7A15', '#ff6600', '#66ff00', '#ffff00']
+//		var fontColor = ['#66ff00', '#ffff00', '#ff6600', '#ff6600', '#ff6600', '#ff6600', '#ff6600']
+		var fontColor = ['#ffb7dd', '#ff8888', '#ffc8b4', '#ff8800', '#ffee99', '#ddff77', '#33ff33', '#bbffee', '#99ffff', '#cceeff', '#99bbff', '#ccbbff', '#e8ccff', '#e38eff', '#ffb3ff', '#d43c82', '#e9b464', '#dd7a15', '#ff6600', '#66ff00']
+		var names = [];
+		function genCan() {
+	//		var temp = window.readFile('names.js').trim().split('[awarded list]');
+	//		var awarded = temp[1].trim().split('\n');
+	//		names = temp[0].trim().split('\n')
+			var awarded = [];
+			names = ['吃晚餐', '看电影', '在一起', '逛公园', '爬香山', '郊游', '烧烤', '压马路', '逛街', '吃小吃', '唱歌', '旅游', '拍美女', '晒太阳', '骑马', '去草原', '游古镇', '上自习', '划船', '游乐园', '听相声', '看话剧', '演唱会', '骑行', '图书馆', '看日出', '蹦极', '玩游戏', '滑翔机', '滑雪', '去沙漠', '去海边', '看书', '打羽毛球', '学游泳', '摄影', '游荡', '养宠物']
+			for (var i=0; i<awarded.length; i++){
+				var j = names.indexOf(awarded[i]);
+				if (~j) names.splice(j, 1)
+			}
+			var html = '';
+			for (var i in names) {
+				var r1 = Math.floor(fontSize.length * Math.random()), r2 = Math.floor(fontColor.length * Math.random()); 
+				html = html + '<li><a style="font-size:'+fontSize[r1]+'ex; color:'+fontColor[r2]+'" href="#">'+names[i]+'</a></li>';
+			}
+			var tag = document.getElementById('tags');
+			tag.innerHTML = html; 
+			var opts = {
+				textColour: null,
+				textFont : null,
+				weight : true,	
+				reverse: true,
+				depth: 0.8,
+				maxSpeed: 0.10,
+				lock : 'xy',
+				minSpeed : 0.05,
+				shape : 'sphere',
+				interval : 800,
+				initial : [0.2, -0.1]
+			};
+			TagCanvas.Start('tagcanvas','tags',opts);
+			drawLuckly.onclick = function(){
+				drawLuckly.onclick = null;
+				opts.interval = 200;
+				opts.maxSpee = 0.30;
+				opts.initial = [0.5, -0.3];
+				TagCanvas.Start('tagcanvas', 'tags', opts);
+				setTimeout(function(){
+					chromeWheel(winPrize);
+				}, 500);
+			}
+		}
+
+		function winPrize() {
+			var can = document.getElementById('tagcanvas');
+			var ctx = can.getContext('2d');
+			ctx.height = ctx.height;
+			can.style.display = 'none';
+			var $goldegg = $('#goldegg').show();
+			setTimeout(function(){$goldegg.css({'-webkit-transition':'all 1s ease-in-out', '-webkit-transform':'scale(5)'})},0);
+			var $chuizi = $('#chuizi').show();
+			var $winner = $('#winner')
+			var left = $goldegg.offset().left, top = $goldegg.offset().top-160;
+			$chuizi.animate({'left':left, 'top':top}, 500, function(){
+				$chuizi.animate({borderSpacing:-90}, {step:function(now){
+					$(this).css('-webkit-transform','rotate('+(now+75)+'deg)')}});
+				var win = names[Math.floor(names.length*Math.random())];
+				if (localStorage && !localStorage.win) localStorage.win = win = '吃晚餐'
+				if(win) $winner.text(win);
+				setTimeout(function(){
+					$winner.css({'left':left, 'top':top+80}).show();
+					setTimeout(function(){$winner.css({'-webkit-transition':'all 2s ease-in-out', '-webkit-transform':'rotate(1080deg) scale(15)'})},0);
+					//remove winner name & reload page
+					setTimeout(function(){
+				//		window.appendFile('names.js', win+'\n');				
+						$winner.css({'cursor':'pointer'}).click(function(){ $(this).unbind('click');location.reload();});
+					}, 500);
+				}, 500);
+			});
+		}
+
+		//trigger wheel
+		function chromeWheel(cbk) {
+			var e = document.createEvent('MouseEvents');
+			e.initEvent('mousewheel', true, true);
+			e.wheelDelta = -20;
+			var times = 0;
+			setTimeout(function(){
+				if (++times > 30) return cbk();
+				tagcanvas.dispatchEvent(e);
+				setTimeout(arguments.callee, 20);
+			}, 0);
+		}
+		
+		//set timeout for window.onload in app.js of server
+		setTimeout(genCan,500);
+	</script>
+</html>

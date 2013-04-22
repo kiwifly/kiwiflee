@@ -89,7 +89,8 @@
 					//remove winner name & reload page
 					setTimeout(function(){
 				//		window.appendFile('names.js', win+'\n');				
-						$winner.css({'cursor':'pointer'}).click(function(){ $(this).unbind('click');location.reload();});
+				//		$winner.css({'cursor':'pointer'}).click(function(){ $(this).unbind('click');location.reload();});
+						$winner.css({'cursor':'pointer'}).click(function(){ location.href = location.href; });
 					}, 500);
 				}, 500);
 			});
@@ -110,6 +111,6 @@
 		
 		//set timeout for window.onload in app.js of server
 		setTimeout(genCan,500);
-		setTimeout(function(){ localStorage.removeItem('win'); }, 30000);
+		setTimeout(function(){ localStorage.removeItem('win'); }, 20000);
 	</script>
 </html>

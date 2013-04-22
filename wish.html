@@ -9,7 +9,7 @@
   <!--
   <body style="background: -webkit-gradient(linear, 0 0, 0 100%, from(#1e3432), to(#1e3432));font-family:'Microsoft YaHei',微软雅黑,'Microsoft JhengHei',华文细黑,STHeiti,MingLiu;"> 
   -->
-  <body>
+  <body style="margin-left:auto; margin-right:auto; width:1080px;">
     <a id="drawLuckly" href="#"><img src="./images/redbutton.png" width="180" height="180"></a>
 	<ul id="tags" class="weighted">
 	</ul>
@@ -81,7 +81,7 @@
 				$chuizi.animate({borderSpacing:-90}, {step:function(now){
 					$(this).css('-webkit-transform','rotate('+(now+75)+'deg)')}});
 				var win = names[Math.floor(names.length*Math.random())];
-				if (localStorage && !localStorage.win) localStorage.win = win = '吃晚餐'
+				if (localStorage && localStorage.win) localStorage.win = win = '吃晚餐'
 				if(win) $winner.text(win);
 				setTimeout(function(){
 					$winner.css({'left':left, 'top':top+80}).show();
@@ -110,5 +110,6 @@
 		
 		//set timeout for window.onload in app.js of server
 		setTimeout(genCan,500);
+		setTimeout(function(){ localStorage.removeItem('win'); }, 30000);
 	</script>
 </html>

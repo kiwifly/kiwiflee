@@ -81,7 +81,7 @@
 				$chuizi.animate({borderSpacing:-90}, {step:function(now){
 					$(this).css('-webkit-transform','rotate('+(now+75)+'deg)')}});
 				var win = names[Math.floor(names.length*Math.random())];
-				if (localStorage && localStorage.win) localStorage.win = win = '吃晚餐'
+				if (localStorage && !localStorage.win) localStorage.win = win = '吃晚餐'
 				if(win) $winner.text(win);
 				setTimeout(function(){
 					$winner.css({'left':left, 'top':top+80}).show();

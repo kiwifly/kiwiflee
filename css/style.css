@@ -1,0 +1,116 @@
+body {
+	background: url('../images/body_bg.png');
+	font-family: Tahoma,Geneva,Verdana,sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+.intro {
+	background: url('../images/intro_bg.jpg') no-repeat center center;
+	width: 100%;
+	height: 750px;
+}
+.section {
+	height: 650px;
+	padding-top: 100px;
+	width: 980px;
+	margin: 0 auto;
+}
+h1 {
+	color: #f2b220;
+	font-size: 30px;
+	letter-spacing: 0.075em;
+	text-shadow: 3px 3px 7px #333;
+	text-align: center;
+	margin-bottom: 65px;
+}
+.headline {
+	margin-bottom: 65px;
+}
+.quotes {
+	width: 384px;
+	height: 103px;
+	float: left;
+	margin: 0 50px 0 100px;
+	padding: 0;
+}
+.quotes p {
+	text-shadow: 2px 2px 5px #000000;
+	font-size: 18px;
+	font-style: italic;
+	text-align: center;
+	color: #fff;
+}
+.yellow232 {
+	width: 232px;
+	background: url('../images/button-232px-yellow.png');
+}
+.yellow232:hover {
+	background: url('../images/button-232px-yellow.png') no-repeat 0 -60px;
+}
+
+.button {
+	height: 61px;
+	color: #fff;
+	text-align: center;
+	font-weight: 900;
+	text-shadow: 1px 1px 2px #333;
+	text-decoration: none;
+	font-size: 17px;
+	line-height: 57px;
+	display: block;
+}
+#start {
+	float: left;
+}
+.white_area {
+	height: 184px;
+	padding: 25px;
+	background: url('../images/nl_home_bg.png');
+	width: 714px;
+	margin: 30px auto;
+}
+.clear {
+	clear: both;
+}
+.signup {
+	width: 430px;
+	height: 204px;
+	padding: 10px 20px 0 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.signup h2 {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #70893f;
+	margin-bottom: 10px;
+}
+.signup p {
+	margin-bottom: 10px;
+	font-size: 17px;
+}
+.email {
+	padding-top: 20px;
+}
+.email label {
+	float: left;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	padding-right: 10px;
+}
+.email input {
+	float: left;
+	padding-left: 10px;
+}
+.email .text {
+	height: 30px;
+	width: 200px;
+}
+#jump {
+	display: none;
+	position: absolute;
+	right: 300px;
+	top: 200px;
+}

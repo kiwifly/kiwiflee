@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		h1 {
+			font-size: 32px;
+		}
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			font-size: 20px;
+		}
+	</style>
+	<title>秘密花园</title>
+</head>
+<body style="background:url('./images/encry.jpg') top center no-repeat #f2f0f0;">
+	<div style="margin-left: auto; margin-right: auto; width: 500px;">
+		<h1 style="margin-top: 100px; text-align: center;">秘密花园</h1>
+		<div class="main" style="margin-top: 100px; text-align: center;">
+			<h2>欢迎来到小黄大白的神秘花园</h2>
+			<p style="margin-top: 100px;"><label>接头暗号：<input type="text" id="cipher"></label><p>
+			<p><label>今日密文：<input type="text" id="ciphertext"></label></p>
+			<p id="decrypt" style="display: block;width: 160px;height: 40px;line-height: 40px;font-size: 18px;background: #877566; cursor: pointer; border-radius:5px; margin-left: 170px;font-weight:bold;">解谜~~~~~~</p>
+		</div>
+	</div>
+	<script>
+		var cipher = document.getElementById('cipher');
+		var ciphertext = document.getElementById('ciphertext');
+		document.getElementById('decrypt').onclick = function(){
+			if(cipher.value != '天王盖地虎') {
+				alert('宝塔镇河妖，你懂得~~')
+				return;
+			}
+			alert('大白有约：'+unescape(ciphertext.value))
+		}
+	</script>
+</body>
+</html>

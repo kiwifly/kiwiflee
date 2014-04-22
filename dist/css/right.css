@@ -151,6 +151,43 @@ ul, ul li {
 }
 .left_box .bullet a {
 	font-size: 12px;
+	display: block;
+}
+
+.left_box h2 {
+	height: 36px;
+	line-height: 36px;
+	background-color: #f6f6f6;
+	font-size: 20px;
+	font-size: 2rem;
+	padding-left: 15px;
+	border-left: 5px solid #00a2ca;
+	color: #000;
+	font-size: 16px;
+}
+.left_box h3 {
+	margin-top: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	border-bottom: 1px solid #efefef;
+}
+.left_box span.i_title1 {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	margin-bottom: -1px;
+	border-bottom: 2px solid #4D4D4D;
+	color: #333;
+}
+.c_service .bullet a {
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+}
+.left_box .c_plat a {
+	width: 320px;
+	display: inline-block;
+	margin: 5px 0 5px 10px;
 }
 
 .box .profile {

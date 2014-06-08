@@ -2,23 +2,36 @@ body {
 	background: #fefefe;
 	color: #6a6a6a;
 }
-.mt10 {
-	margin-top: 10px;
+.f14 {
+	font-size: 14px;
 }
-.mt20 {
-	margin-top: 20px;
+.left {
+	float: left;
 }
-.pr {
-	position: relative;
-}
-.pa {
-	position: absolute;
+.right {
+	float: right;
 }
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.ml10 {
+	margin-left: 10px;
+}
+
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
 }
 .orange_f {
 	color: #ff6200;
@@ -101,13 +114,20 @@ ul, ul li {
 	padding-left: 10px;
 	color: #ff6200;
 }
-
 .left_box .title {
 	font-size: 20px;
 	height: 40px;
 	line-height: 40px;
 }
-
+.links .title {
+	font-size: 12px;
+	color: #aaa;
+}
+.links a {
+	color: #aaa;
+	margin-left: 25px;
+	display: inline-block;
+}
 .left_box .item .i_title {
 	font-size: 16px;
 	height: 32px;
@@ -146,14 +166,16 @@ ul, ul li {
 
 .left_box .bullet {
 	border-left: 1px solid #78cff8;
-	margin-left: 10px;
-	padding-left: 10px;
+	margin-left: 5px;
+	padding-left: 5px;
 }
 .left_box .bullet a {
 	font-size: 12px;
 	display: block;
 }
-
+.left_box .bullet p {
+	margin: 0 0 -5px;
+}
 .left_box h2 {
 	height: 36px;
 	line-height: 36px;
@@ -180,7 +202,7 @@ ul, ul li {
 	color: #333;
 }
 .c_service .bullet a {
-	font-size: 14px;
+	font-size: 12px;
 	height: 24px;
 	line-height: 24px;
 }

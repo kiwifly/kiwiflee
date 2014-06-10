@@ -129,10 +129,11 @@ ul, ul li {
 }
 .links .title {
 	font-size: 12px;
-	color: #888;
+	color: #fff;
+	background: #0071b9;
 }
 .links a {
-	color: #888;
+	color: #fff;
 	margin-left: 25px;
 	display: inline-block;
 }

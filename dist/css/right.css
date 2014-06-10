@@ -119,13 +119,13 @@ ul, ul li {
 	font-weight: bold;
 	padding-left: 10px;
 	color: #ff6200;
-	background: #f8f8f8;
+	background: #ccc;
 }
 .left_box .title {
 	font-size: 20px;
 	height: 40px;
 	line-height: 40px;
-	background: #f8f8f8;
+	background: #ccc;
 }
 .links .title {
 	font-size: 12px;

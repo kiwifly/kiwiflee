@@ -37,7 +37,7 @@ body {
 	color: #ff6200;
 }
 .container {
-	width: 980px;
+	width: 1080px;
 }
 .shadow {
 	margin-top: 15px;
@@ -134,7 +134,6 @@ ul, ul li {
 }
 .links a {
 	color: #fff;
-	margin-left: 25px;
 	display: inline-block;
 }
 .left_box .item .i_title {
@@ -175,8 +174,6 @@ ul, ul li {
 
 .left_box .bullet {
 	border-left: 1px solid #78cff8;
-	margin-left: 5px;
-	padding-left: 5px;
 }
 .left_box .bullet a {
 	font-size: 12px;
@@ -245,9 +242,47 @@ ul, ul li {
 }
 
 #myCarousel {
-	height: 307px;
+    overflow: hidden;
 }
-
+#myCarousel1 h4 {
+    margin: 0;
+    font-size: 14px;
+}
+#myCarousel1 .carousel-caption {
+    padding-bottom: 0;
+    left: 10%;
+    right: 10%;
+}
+#myCarousel .carousel-inner>.item {
+    width: 100%;
+}
+.carousel-indicators{
+    bottom: 0;
+}
+.plr0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.con_news {
+    padding: 0 10px;
+}
+.news_topic {
+    border-bottom: 1px solid #ccc;
+}
+.news_topic h4 {
+    font-size: 20px;
+    text-align: center;
+}
+.news_topic p {
+    font-size: 12px;
+    padding: 10px 12px 0;
+}
+.con_news_list {
+    padding:  10px 12px 0;
+}
+.con_news_list span {
+    float: right;
+}
 .news {
 	border-top: 3px solid #ff6200;
 }
@@ -259,7 +294,7 @@ ul, ul li {
 }
 .news ul li {
 	text-align: center;
-	width: 16%;
+	width: 14%;
 	float: left;
 }
 .news ul li a {
@@ -279,7 +314,7 @@ ul, ul li {
 	overflow: hidden;
 }
 .news_con .slide {
-	width: 4230px;
+	width: 4935px;
 	height: 100px;
 }
 .news_con ul {
@@ -304,9 +339,9 @@ ul, ul li {
 }
 
 .footer {
-	height: 150px;
+	height: 100px;
 	background: #f7f7f8;
-	padding-top: 30px;
+	padding-top: 20px;
 	margin-top: 20px;
 }
 .footer .col-xs-6 {
@@ -321,4 +356,160 @@ ul, ul li {
 }
 .vr_r {
 	border-right: 1px solid #d6d6d6;
+}
+
+/* gather page */
+.sidebar .types {
+width: 240px;
+list-style: none;
+background-color: #fefefe;
+border-radius: 2px;
+border: solid 1px #e5e5e5;
+border-bottom: none;
+}
+.sidebar .types li {
+position: relative;
+width: 220px;
+height: auto;
+cursor: pointer;
+text-align: center;
+color: #555;
+border-bottom: solid 1px #e5e5e5;
+margin: 0 auto;
+}
+.sidebar .types li a {
+display: inline-block;
+width: 100%;
+height: 44px;
+line-height: 44px;
+color: #555;
+text-decoration: none;
+font-size: 16px;
+}
+.spea {
+position: absolute;
+height: 44px;
+width: 4px;
+background: #e85526;
+display: none;
+left: -10px;
+top: 0;
+}
+.sidebar .types li.active a {
+color: #e85526;
+}
+.sidebar .types li.active .spea {
+display: block;
+}
+.activity-title-box {
+padding-left: 15px;
+height: 45px;
+border-radius: 2px;
+border: 1px solid #e5e5e5;
+border-bottom: 4px solid #e85526;
+background: #fefefe;
+}
+.activity-title-box h4 {
+font-size: 20px;
+color: #383838;
+}
+.news-content {
+}
+.content-text {
+padding: 30px 20px 0 20px;
+margin-bottom: 10px;
+border: 1px solid #e5e5e5;
+border-radius: 2px;
+background: #fefefe;
+}
+.content-text a {
+font-size: 20px;
+color: #4f4f4f;
+}
+.content-text p {
+font-size: 14px;
+padding-top: 15px;
+color: #555555;
+}
+.content-text .text-right {
+padding: 10px 0;
+font-size: 12px;
+color: #aaaaaa;
+}
+
+/* detail page */
+.news-detail {
+padding: 0 0 0 10px;
+margin-bottom: 10px;
+height: auto;
+overflow: hidden;
+}
+.news-detail .news-title {
+height: 45px;
+background: #fefefe;
+border: solid 1px #e5e5e5;
+border-bottom: 4px solid #e85526;
+}
+.news-detail .news-title p {
+font-size: 14px;
+color: #4f4f4f;
+padding-left: 20px;
+height: 45px;
+line-height: 45px;
+}
+.detail-cont {
+padding-bottom: 25px;
+margin-top: 12px;
+height: auto;
+border: solid 1px #e5e5e5;
+background: #fefefe;
+}
+.detail-cont .detail-item {
+padding: 0 20px;
+}
+.detail-item {
+color: #4f4f4f;
+}
+.detail-item h1 {
+font-size: 20px;
+color: #4f4f4f;
+border-bottom: solid 1px #e5e5e5;
+line-height: 55px;
+text-align: center;
+}
+.detail-item .detail-header {
+height: 50px;
+line-height: 50px;
+text-align: center;
+}
+.detail-item .detail-header span {
+font-size: 10px;
+color: #4f4f4f;
+}
+.detail-item .detail-body {
+width: 100%;
+text-align: center;
+overflow: hidden;
+display: inline-block;
+}
+.detail-item .detail-content {
+margin-top: -1em;
+}
+.detail-item p {
+font-size: 14px;
+line-height: 24px;
+margin-top: 1em;
+text-indent: 2em;
+}
+.news-detail .cont-box {
+margin-top: 10px;
+padding-left: 25px;
+height: 94px;
+line-height: 94px;
+background: #fefefe;
+border: 1px solid #e5e5e5;
+}
+.news-detail .cont-box span, .news-detail .cont-box a {
+font-size: 14px;
+color: #555;
 }

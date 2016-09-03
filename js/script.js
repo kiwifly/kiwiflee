@@ -57,8 +57,14 @@
 		});
 
 		/*Player*/
+    var audio_index = 1;
 		$('.music').on("click", function(e){
-			$('.player').fadeToggle();
+      if (audio_index % 2 === 1) {
+			 $('audio')[0].pause();
+      } else {
+        $('audio')[0].play();
+      }
+      audio_index++;
 			e.preventDefault();
 		});
 
@@ -109,8 +115,5 @@
 			color: '#fff', minPixel: 1, maxPixel: 3, total : 55, on: '.into_firefly'
 		});
 		
-		/* Refresh ScrollR */
-		s.refresh($(".guest_wrapper, .our_story"));
-
 	});
 })(jQuery);
